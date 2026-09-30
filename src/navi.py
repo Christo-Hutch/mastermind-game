@@ -141,23 +141,23 @@ class MenuNavi:
     @staticmethod
     def multi_round_menu():
         multi_round_modes = MenuNavi.get_multi_round_modes()
-        options = ["Hard", "Medium", "Easy", "Go Back"]
+        options = ["Long", "Normal", "Short", "Go Back"]
         terminal_menu = TerminalMenu(options, title="Play Single Round")
         menu_entry_index = terminal_menu.show()
         
         match menu_entry_index:
             case 0:
-                new_game = Game(multi_round_modes["hard"][0], multi_round_modes["hard"][1])
+                new_game = Game(multi_round_modes["long"][0], multi_round_modes["long"][1])
 
                 new_game.play_game()
 
             case 1:
-                new_game = Game(multi_round_modes["medium"][0], multi_round_modes["hard"][1])
+                new_game = Game(multi_round_modes["normal"][0], multi_round_modes["normal"][1])
 
                 new_game.play_game()
 
             case 2:
-                new_game = Game(multi_round_modes["easy"][0], multi_round_modes["hard"][1])
+                new_game = Game(multi_round_modes["short"][0], multi_round_modes["short"][1])
 
                 new_game.play_game()
 
