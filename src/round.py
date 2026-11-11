@@ -58,7 +58,6 @@ class Round:
         for r in range(self.board.num_of_rows):
             print(self.get_row_response_formatted(r))
 
-    # Returns True if the attempt was correct
     def attempt_row(self, row_data: list):
         if self.remaining_rows <= 0:
             raise ValueError("No remaining rows for board left!")
