@@ -142,7 +142,7 @@ class MenuNavi:
     def multi_round_menu():
         multi_round_modes = MenuNavi.get_multi_round_modes()
         options = ["Long", "Normal", "Short", "Go Back"]
-        terminal_menu = TerminalMenu(options, title="Play Single Round")
+        terminal_menu = TerminalMenu(options, title="Play Multiple Rounds")
         menu_entry_index = terminal_menu.show()
         
         match menu_entry_index:
